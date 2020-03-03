@@ -10,25 +10,22 @@
 #include "LinkedList/LinkedList.h"
 using namespace std;
 
+void print();
+
 int main() {
 	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
 	LinkedList list;
-	cout << list.size() << endl;
 
 	list.append(10);
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	list.insert(9, 0);
+	list.insert(8, 1);
 
-	list.append(10);
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	cout << list.getAt(2) << endl;
 
-	list.append(10);
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	cout << list.deleteAT(1) << endl;
+	list.print();
 
-	cout << list.size() << endl;
-	list.insert(7, 2);
-	cout << list.size() << endl;
-	list.insert(7, 2);
-	cout << list.size() << endl;
+	list.clear();
 
 	return 0;
 }
